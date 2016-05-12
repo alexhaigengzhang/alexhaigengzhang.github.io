@@ -100,136 +100,25 @@ title: homepage
                 <div class="block-line vertical" style="height:60px; left:50%; margin-left:111%; margin-top:-60px;"></div>
             </div>
 
+		{% for post in site.posts %}
             <div class="speaker-wrapper">
-                <div class='right speaker-image-wrapper'>
-                    <img class="right" src="img/speaker-brad-jakeman.jpg"/>
+                <div class='{{ post.position }} speaker-image-wrapper'>
+                    <img class={{ post.position }} src={{ post.img2 }}/>
                 </div>
                 <div class="left speaker-details">
-                    <span class="speaker-name">Brad Jakeman</span>
-                    <span class="speaker-position">President,<br/>PepsiCo Global Beverage Group</span>
+                    <span class="speaker-name">{{ post.title }}</span>
+                    <span class="speaker-position">{{ post.author }}<br/>{{ post.description }}</span>
                     <input type="button" class="read-more" value="Read more"/>
                 </div>
                 <div class="speaker-bio">
                     <div class="speaker-bio-container">
-                        <p><strong>About the Speaker</strong></p>
-                        <p>Brad Jakeman has a passion for developing category-disruptive innovation ideas and marketing programs that challenge the status quo and build famous, world-class brands. As President, PepsiCo Global Beverage Group, Jakeman leads global category strategy, brand building, design, advertising, marketing, innovation and branded content for PepsiCo’s global portfolio of beverages, which includes 10 of PepsiCo’s 22 Billion Dollar brands such as Pepsi, Mountain Dew, Aquafina, Mirinda, 7UP and Gatorade. Under his stewardship, Pepsi unveiled the first-ever global positioning for the brand, enlivened under the “Live for Now” tagline; rolled out the brand’s first truly global, synchronised advertising campaign featuring Beyoncé; unleashed the biggest global football campaign in the brand’s history; and reinvented the Pepsi Challenge to commemorate its landmark 40th anniversary. In addition, Jakeman has led the global expansion of Mountain Dew and the harmonisation of that brand, with the first truly global brand campaign under the “Do The Dew” brand credo. Jakeman also unveiled new global visual identity systems for PepsiCo’s flagship beverages including Pepsi, 7UP and Mirinda.</p> 
- 
-                        <p>In a career that has spanned fashion, retail, consumer packaged goods, entertainment, technology and financial services, Jakeman has managed some of the world’s biggest brands on a global stage.</p>
-                            
-                        <p>In the last 10 years Jakeman has been responsible for leading ideas and brand programs that have won more than 200 awards. <em>Advertising Age</em> named Jakeman one of America’s “Top 50 Marketers”; <em>The Australian</em> dubbed him one of the “top 20 people shaping global media”; in July 2015 he was named “Advertising Person of the Year” by the Ad Club of New York; and <em>Adweek</em> ranked him #4 on the list of “Vital Leaders in Tech, Media and Marketing”. He is a board member of the Ad Council, The Advertising Club of New York, and The Association of National Advertisers (ANA).</p>
- 
-                        <p>Jakeman was born in Australia and holds a Bachelor’s degree in Mass Communication and Psychology from Macquarie University, Sydney. He currently resides in New York City.</p>
+                        {{ post.content }}
                     </div>
                 </div>
             </div>
+         {% endfor %}
 
-            <div class="speaker-wrapper">
-                <div class='left speaker-image-wrapper'>
-                    <img class="left" src="img/speaker-sarah-wood.jpg"/>
-                </div>
-                <div class="right speaker-details">
-                    <span class="speaker-name">Sarah Wood</span>
-                    <span class="speaker-position">Co-founder and Co-CEO,<br/>Unruly</span>
-                    <input type="button" class="read-more" value="Read more"/>
-                </div>
-                <div class="speaker-bio">
-
-                    <div class="speaker-bio-container">
-                        <p><strong>About the Speaker</strong></p>
-                        <p>Sarah Wood is co-founder and co-CEO of video ad tech company, Unruly, where she ensures the company delivers the most awesome social video campaigns on the planet.</p>
- 
-                        <p>Ninety per cent of Ad Age 100 brands have trusted Unruly to connect with audiences at speed and scale across the Open Web. Unruly has 15 offices, employs 200 people and was acquired by News Corp in September 2015.</p>
- 
-                        <p>Sarah has been voted one of “15 Women to Watch in Tech” by Inc., one of “10 London-Based Entrepreneurs to Watch” by <em>Forbes</em> and #4 in Digital Spy's “Top 10 Women in Tech”. She is a member of Tech City’s Entrepreneur Advisory Panel and a Technology Ambassador for London.</p>
- 
-                        <p>Sarah is also an associate lecturer at the University of Cambridge, where she teaches a course in Mash-Ups, Memes and LOLitics: Online Video Culture and the Screen Media Revolution.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="speaker-wrapper">
-                <div class='right speaker-image-wrapper'>
-                    <img class="left" src="img/speaker-monica-lewinsky.jpg"/>
-                </div>
-                <div class="left speaker-details">
-                    <span class="speaker-name">Monica Lewinsky</span>
-                    <span class="speaker-position">Social activist, public speaker and writer</span>
-                    <input type="button" class="read-more" value="Read more"/>
-                </div>
-                <div class="speaker-bio">
-
-                    <div class="speaker-bio-container">
-                        <p><strong>About the Speaker</strong></p>
-                        <p>Monica Lewinsky is a social activist in the battle against online harassment -- advocating for a safer social media environment. As a public speaker, writer, and contributor to <em>Vanity Fair</em> she addresses such topics as survival, resilience, digital reputation and equality. </p>
-
-                        <p>Monica&rsquo;s lens for these societal issues is focused by her myriad unique and profound experiences: working in government -- both in the White House and the Pentagon; the investigation that resulted from her time in Washington, D.C.; involvement in media projects as both producer and subject; as an entrepreneur and designer; and lastly, education. She graduated with a degree in Psychology from Lewis &amp; Clark College (Portland, Oregon) and, living abroad for graduate school, earned a Masters degree in Social Psychology from the London School of Economics and Political Science.</p>
-
-                        <p>In 2014, after a decade long self-imposed retreat from public life, Lewinsky authored an essay, titled &ldquo;Shame and Survival&rdquo;, for <em>Vanity Fair</em> in which she overlapped personal experiences and cultural observations regarding the shift towards, what Professor Nicholaus Mills calls, a &ldquo;Culture of Humiliation&rdquo;. (June, 2014). The acclaimed piece, which received over two million unique views online and was nominated for a National Magazine Award, was an entry point for her to begin a process she describes as &ldquo;taking back my narrative and giving a purpose to my past.&rdquo;</p>
-                        
-                        <p>Lewinsky became known to the public in 1998, when it was revealed as part of a federal investigation that she had had an intimate relationship with then President Bill Clinton. Overnight, at just 24 years old, she went unwillingly, from being an entirely private individual to a public figure on the global stage. Being at the center of a legal, political and media maelstrom nearly destroyed her; her survival &ndash; despite the odds &ndash; is a compelling and inspiring story. </p>
-
-                        <p>The investigation unfolded against a backdrop of a changing media landscape with the advent of both competing 24-hour News Networks and the Internet. With the birth of social media in recent years, Lewinsky saw the increasing proliferation of the perpetuation of shame and humiliation online. As someone who had experienced both, on the widest scale and at a young age, she saw that she could participate in the public discourse about online harassment and work to effect change. </p>
-
-                        <p>In October, 2014, Lewinsky gave a speech about the Internet&rsquo;s reputation shredder at the <em>Forbes</em> 30 Under 30 Summit where she spoke from the perspective of being Patient Zero &ndash; having been the first person to have her reputation completely destroyed online. This well received and widely watched speech launched her present day speaking career. </p>
-
-                        <p>In March, 2015, she was a speaker at the annual TED Conference, the theme of which was &ldquo;Truth and Dare&rdquo;. Her speech, &ldquo;The Price of Shame&rdquo; was viewed over 7.5 million times in the first year since release. She also gave the Ogilvy + Inspire Lecture at the Cannes Lions 2015.</p>
-
-                        <p>Lewinsky is an Anti-Bullying Ambassador to both Bystander Revolution in the US and The Diana Award in the UK.</p>
-
-                        <p>On a personal note, Monica is passionate about art - particularly that of contemporary artist Ed Ruscha, game for traveling to new places, loves to sing show tunes, frequents flea markets and doesn&rsquo;t cook.</p>
-
-                        <p>She is on both Facebook and Twitter (<a target="_blank" href="https://twitter.com/MonicaLewinsky">@MonicaLewinsky</a>).</p>
-
-                        <p>Image credit to: Damon Winter/The New York Times/Redux </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="speaker-wrapper">
-                <div class='left speaker-image-wrapper'>
-                    <img class="left" src="img/speaker-lindsay-patterson.jpg"/>
-                </div>
-                <div class="right speaker-details">
-                    <span class="speaker-name">Lindsay Pattison</span>
-                    <span class="speaker-position">Chief Executive Officer,<br/>Maxus Worldwide</span>
-                    <input type="button" class="read-more" value="Read more"/>
-                </div>
-                <div class="speaker-bio">
-
-                    <div class="speaker-bio-container">
-                        <p><strong>About the Speaker</strong></p>
-                        <p>Lindsay has been described as a positive force of nature. As UK CEO she transformed the WPP-owned UK media agency Maxus, growing revenue, staff base and profit sevenfold in just over four years. In October 2014 Lindsay continued her growth within GroupM and was appointed CEO of Maxus Worldwide, which in 2015 enjoyed stellar growth. She is the sole female global media leader.</p>
-
-                        <p>Lindsay was named one of Cranfield’s FTSE Board Report’s 100 Women to Watch in 2015 and in 2015 and 2016 was listed in Britain’s top 500 Most Influential People by Debrett’s. Lindsay was also included in Ad Age’s 2015 class of Women to Watch and is currently Vice Chair of the WEF Global Agenda Council on the Future of Media. In January 2016 Lindsay joined the board of Chime Communications plc as a Non-Executive Director.</p>
-
-                        <p>She holds a high profile in the media industry, and as ex-President of WACL (Women in Advertising and Communications London) is a passionate advocate for gender equality, mentoring many young women, and in 2016 she launched ‘Walk the Talk’ mentoring scheme for women in senior roles at Maxus, to help them reach their full potential.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="speaker-wrapper">
-                <div class='right speaker-image-wrapper'>
-                    <img class="left" src="img/speaker-adam-morgan.jpg"/>
-                </div>
-                <div class="left speaker-details">
-                    <span class="speaker-name">Adam Morgan</span>
-                    <span class="speaker-position">Founder,<br/>eatbigfish</span>
-                    <input type="button" class="read-more" value="Read more"/>
-                </div>
-                <div class="speaker-bio">
-
-                    <div class="speaker-bio-container">
-                        <p><strong>About the Speaker</strong></p>
-                        <p>Adam Morgan is the author of Eating The Big Fish: How Challenger Brands Can Compete Against Brand Leaders, a seminal work in the world of branding. It not only popularised the phrase Challenger Brand, it outlined a process for doing more with less.</p>
-
-                        <p>Founder of eatbigfish, an international marketing consultancy that works with clients to develop their own breakthrough strategies from Helsinki to Hanoi, Adam also co-authored <em>A Beautiful Constraint: How to Transform Your Limitations Into Advantages and Why It’s Everyone’s Business</em> in 2015. His latest book focuses on how to see constraints as a source of inspiration rather than asphyxiation, be they budget, time or resource, and draws inspiration from case studies as diverse as education, supply-chain management, agriculture and global marketing campaigns.</p>
-
-                        <p>His company’s recent clients have included Toyota, Unilever, PlayStation and LVMH.</p>
-
-                        <p>Adam is also a popular speaker for business and marketing conferences around the world, inspiring them with his passion for brands, strategy and the challengers of the future.</p>
-                    </div>
-                </div>
-            </div>
+            	
             
         </div>
     </div>
