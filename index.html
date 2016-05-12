@@ -103,7 +103,7 @@ title: homepage
 		{% for post in site.posts %}
             <div class="speaker-wrapper">
                 <div class='{{ post.position }} speaker-image-wrapper'>
-                    <img class={{ post.position }} src={{ post.img2 }}/>
+                    <img class={{ post.position }} src={{ site.url }}{{ post.img2 }}/>
                 </div>
                 <div class="left speaker-details">
                     <span class="speaker-name">{{ post.title }}</span>
